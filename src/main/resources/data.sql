@@ -24,7 +24,3 @@ INSERT INTO COMMENT VALUES
 (4,'thoughtful',2,now(),1),
 (5,'awwful',5,now(),2);
 
-DELETE FROM SONGMAPPING;
-
-INSERT INTO SONGMAPPING VALUES
-(1,1,1),(2,1,1),(3,1,1),(4,2,2),(5,3,3),(6,1,2),(7,1,2),(1,2,1);

@@ -17,3 +17,6 @@
 
  }
  
+ *host mongo on 27017 using `--port`*
+  
+ *server hosted on localhost:8102*

@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Primary
@@ -23,10 +22,6 @@ public class TrackService implements TrackServiceInterface {
   }
 
   public Track addTrack(Track track){
-
-    if(trackRepository.existsById(track.getTrackId()))
-      throw new TrackExistsException(trackRepository.findById(track.getTrackId()));
-
     trackRepository.save(track);
     return track;
   }
