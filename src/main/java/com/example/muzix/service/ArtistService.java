@@ -12,12 +12,14 @@ import java.util.List;
 @Service
 public class ArtistService {
 
-  private ArtistRepository artistRepository;
   @Autowired
+  private ArtistRepository artistRepository;
+
   public ArtistService(ArtistRepository artistRepository) {
     this.artistRepository = artistRepository;
   }
 
+  public ArtistService(){ }
   public List<Artist> getAllArtists() {
     return artistRepository.findAll();
   }
