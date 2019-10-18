@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mongodb:
+    image: mongo:4.0.0
+    container_name: "mongodb"
+    ports:
+      - 27090:27090
+    command: --smallfiles
+  app:
+    image: 042ba27548a9
+    ports:
+      - 8080:8080
+      - 8201:8210
+    links:
+      - mongodb
