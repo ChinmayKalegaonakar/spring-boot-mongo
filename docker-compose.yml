@@ -4,12 +4,13 @@ services:
     image: mongo:4.0.0
     container_name: "mongodb"
     ports:
-      - 27090:27090
+      - 27019:27090
     command: --smallfiles
   app:
-    image: 042ba27548a9
+    build: .
+    image: app/muzix
     ports:
       - 8080:8080
-      - 8201:8210
+      - 8102:8111
     links:
       - mongodb
